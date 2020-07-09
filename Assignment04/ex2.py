@@ -56,6 +56,7 @@ def update_plot(map):
     ax2.plot(x, map)
     plt.tight_layout()
     plt.pause(3)
+    plt.close()
     # END: 2c
 
 
@@ -98,7 +99,7 @@ def main():
                         help='The pre-defined run to execute',
                         type=int,
                         choices=range(len(runs)),
-                        default=0)
+                        default=2)
     args = parser.parse_args()
     map = initialize_map()
     update_plot(map)
